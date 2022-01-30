@@ -1,5 +1,5 @@
 # I saw some people talking about bubble sort
-# and tried to make it. Accordig to Wikipedia,
+# and tried to make it. According to Wikipedia,
 # bubble sort, is a simple sorting algorithm
 # that repeatedly steps through a list,
 # compares adjacent elements and swaps them
@@ -13,3 +13,16 @@
 # elementos adjacentes e os troca se estiverem
 # na ordem errada. A passagem pela lista é repetida
 # até que a lista seja ordenada.
+
+list_of_numbers = [3, 9, 2, 1, 4, 0, 6, 8, 5, 7]
+x = 0
+
+while x < (len(list_of_numbers) - 1):
+
+    if list_of_numbers[x] > list_of_numbers[x + 1]:
+        t = list_of_numbers[x]
+        list_of_numbers[x] = list_of_numbers[x + 1]
+        list_of_numbers[x + 1] = t
+    x += 1
+
+print(list_of_numbers)
