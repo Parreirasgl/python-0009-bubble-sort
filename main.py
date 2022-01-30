@@ -16,13 +16,19 @@
 
 list_of_numbers = [3, 9, 2, 1, 4, 0, 6, 8, 5, 7]
 x = 0
+list_changed = False
 
 while x < (len(list_of_numbers) - 1):
 
     if list_of_numbers[x] > list_of_numbers[x + 1]:
-        t = list_of_numbers[x]
+        list_changed = True
+        temp = list_of_numbers[x]
         list_of_numbers[x] = list_of_numbers[x + 1]
-        list_of_numbers[x + 1] = t
+        list_of_numbers[x + 1] = temp
     x += 1
+
+    if x == (len(list_of_numbers) - 1) and list_changed == True:
+        x = 0
+        list_changed = False
 
 print(list_of_numbers)
